@@ -5,7 +5,7 @@ const GreedyLogo = () =>{
 
   return <GreedyLogoImage
     src={greedySquareImage}
-    alt={'greedySquareImage'}
+    alt={'Greedy 로고'}
   />;
 
 };
