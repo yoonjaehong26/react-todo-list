@@ -25,7 +25,7 @@ const TodoListItem = ({todo, onToggleCheckBox, onRemoveTodo}) => {
 
 export default TodoListItem;
 
-const TodoListItemContainer = styled.div`
+const TodoListItemContainer = styled.li`
   padding: 1rem;
   display: flex;
   align-items: center;

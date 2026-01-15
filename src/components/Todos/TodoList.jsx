@@ -16,10 +16,13 @@ const TodoList=({todos, onToggleCheckBox, onRemoveTodo})=>{
 
 export default TodoList;
 
-const TodoListContainer = styled.div`
+const TodoListContainer = styled.ul`
   display: flex;
   flex-direction: column;
   flex: 1;       
   width: 100%;   
   overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
   `;
