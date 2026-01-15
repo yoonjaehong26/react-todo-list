@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { MdCheckBox,MdCheckBoxOutlineBlank ,MdRemoveCircleOutline} from 'react-icons/md';
-import { UnstyledButton } from '../ui/UnStyledButton.jsx';
+import { UnStyledButton } from '../ui/UnStyledButton.jsx';
 
 const TodoListItem = ({todo, onToggleCheckBox, onRemoveTodo}) => {
 
@@ -33,7 +33,7 @@ const TodoListItemContainer = styled.div`
   box-sizing: border-box;
 `;
 
-const CheckBoxContainer = styled(UnstyledButton)`
+const CheckBoxContainer = styled(UnStyledButton)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,7 +48,7 @@ const Text = styled.div`
   text-decoration: ${({ $isChecked }) => ($isChecked ? 'line-through' : 'none')};
 `;
 
-const RemoveButtonContainer = styled(UnstyledButton)`
+const RemoveButtonContainer = styled(UnStyledButton)`
   display: flex;
   align-items: center;
   justify-content: center;
