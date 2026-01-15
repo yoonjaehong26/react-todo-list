@@ -36,7 +36,7 @@ const CheckBoxContainer = styled.div`
 const Text = styled.div`
   margin-left: 0.5rem;
   flex: 1; 
-  color: ${({ $isChecked }) => ($isChecked ? '#adb5bd' : 'inherit')};
+  color: ${({ $isChecked, theme }) => ($isChecked ? theme.colors.grayText : theme.colors.text)};
   text-decoration: ${({ $isChecked }) => ($isChecked ? 'line-through' : 'none')};
 `;
 
@@ -45,8 +45,8 @@ const RemoveButtonContainer = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  color: red;
   cursor: pointer;
+  color: ${({ theme }) => theme.colors.removeIcon};
   &:hover {
     opacity: 0.5;
   }

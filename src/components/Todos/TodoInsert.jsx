@@ -19,7 +19,7 @@ const TodoInsert =({onInsertTodo})=>{
         onChange={(e)=>setValue(e.target.value)}
       />
       <TodoInsertButton type="submit">
-        <MdAdd color='white'/>
+        <MdAdd />
       </TodoInsertButton>
     </TodoInsertContainer>
   );
@@ -31,12 +31,11 @@ const TodoInsertContainer = styled.form`
   display: flex;
   width: 100%;
   height: 50px;    
-  background: #495057; 
+  background: ${({ theme }) => theme.colors.background};
   `;
 
 const TodoInsertInput = styled.input`
-background-color: #495057;
-    background: none;
+    background-color: ${({ theme }) => theme.colors.background};
     border: none;
     color: #fff;
     font-size: 1.125rem;
@@ -52,14 +51,15 @@ const TodoInsertButton = styled.button`
 
     align-items: center;
     justify-content: center;
-    background: #868e96;
+    background: ${({ theme }) => theme.colors.buttonColor};
     border: none;
     padding: 0 1rem;
     font-size: 1.5rem;
     cursor: pointer;
     outline: none;
     transition: 0.1s background ease-in;
+    color:${({ theme }) => theme.colors.lightText};
     &:hover {
-      background: #adb5bd;
+      opacity: 0.5;
     }
   `;

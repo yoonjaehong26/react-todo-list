@@ -48,10 +48,10 @@ const TodoTemplateHeaderContainer = styled.div`
   display: flex;
   width:100%;
   height:48px;
-  background-color: #007356;
+  background-color: ${({ theme }) => theme.colors.primary};
 `;
 
 const TodoTemplateHeaderText = styled.div`
-  color: white;
+  color: ${({ theme }) => theme.colors.lightText};
   font-size: 20px;
 `;
