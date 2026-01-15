@@ -15,10 +15,18 @@ function App() {
     setTodos(todos.concat(newTodo));
   };
 
+  const onToggleCheckBox = (selectedTodoId) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === selectedTodoId ? { ...todo, isChecked: !todo.isChecked } : todo,
+      ),
+    );
+  };
+
   return (
     <TodoTemplate>
       <TodoInsert onInsertTodo={onInsertTodo} />
-      <TodoList todos={todos}  />
+      <TodoList todos={todos} onToggleCheckBox={onToggleCheckBox} />
     </TodoTemplate>
   );
 }

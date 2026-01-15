@@ -1,18 +1,21 @@
 import styled from 'styled-components';
-import { MdCheckBox ,MdRemoveCircleOutline} from 'react-icons/md';
-const TodoListItem = () => {
+import { MdCheckBox,MdCheckBoxOutlineBlank ,MdRemoveCircleOutline} from 'react-icons/md';
+const TodoListItem = ({todo, onToggleCheckBox}) => {
+
   return (
-    <TodoListItemBlock>
-      <MdCheckBox />
-      <Text>리스트1</Text>
+    <TodoListItemContainer>
+      <CheckBoxContainer onClick={() => onToggleCheckBox(todo.id)}>
+        {todo.isChecked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
+      </CheckBoxContainer>
+      <Text>{todo.text}</Text>
       <MdRemoveCircleOutline color='red'/>
-    </TodoListItemBlock>
+    </TodoListItemContainer>
   );
 };
 
 export default TodoListItem;
 
-const TodoListItemBlock = styled.div`
+const TodoListItemContainer = styled.div`
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -20,6 +23,13 @@ const TodoListItemBlock = styled.div`
   box-sizing: border-box;
 
 `;
+
+const CheckBoxContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  `;
 
 const Text = styled.div`
   margin-left: 0.5rem;

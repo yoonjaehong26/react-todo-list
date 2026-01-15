@@ -1,19 +1,13 @@
 import styled from 'styled-components';
 import  TodoListItem from './TodoListItem.jsx';
 
-const TodoList=()=>{
+const TodoList=({todos, onToggleCheckBox})=>{
 
   return (
     <TodoListContainer>
-      <TodoListItem/>
-      <TodoListItem/>
-      <TodoListItem/>
-      <TodoListItem/>
-      <TodoListItem/>
-      <TodoListItem/>
-      <TodoListItem/>
-      <TodoListItem/>
-      <TodoListItem/>
+      {todos.map((todo)=>(
+        <TodoListItem key={todo.id} todo={todo} onToggleCheckBox={onToggleCheckBox} />
+      ))}
     </TodoListContainer>
   );
 };
