@@ -1,20 +1,33 @@
 import styled from 'styled-components';
 import { MdAdd } from 'react-icons/md';
+import { useState } from 'react';
 
-const TodoInsert =()=>{
+const TodoInsert =({onInsertTodo})=>{
+  const [value, setValue]= useState('');
+
+  const onSubmitTodo = (e) => {
+    onInsertTodo(value);
+    setValue('');
+    e.preventDefault();
+  };
+
   return (
-    <TodoInsertContainer>
+    <TodoInsertContainer onSubmit={onSubmitTodo}>
       <TodoInsertInput
         placeholder="할 일을 입력하세요"
+        value={value}
+        onChange={(e)=>setValue(e.target.value)}
       />
-      <TodoInsertButton><MdAdd color='white'/></TodoInsertButton>
+      <TodoInsertButton type="submit">
+        <MdAdd color='white'/>
+      </TodoInsertButton>
     </TodoInsertContainer>
   );
 
 };
 export default TodoInsert;
 
-const TodoInsertContainer = styled.div`
+const TodoInsertContainer = styled.form`
   display: flex;
   width: 100%;
   height: 50px;    
