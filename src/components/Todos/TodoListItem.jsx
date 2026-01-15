@@ -7,7 +7,7 @@ const TodoListItem = ({todo, onToggleCheckBox}) => {
       <CheckBoxContainer onClick={() => onToggleCheckBox(todo.id)}>
         {todo.isChecked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
       </CheckBoxContainer>
-      <Text>{todo.text}</Text>
+      <Text $isChecked={todo.isChecked}>{todo.text}</Text>
       <MdRemoveCircleOutline color='red'/>
     </TodoListItemContainer>
   );
@@ -29,9 +29,12 @@ const CheckBoxContainer = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  font-size: 1.5rem;
   `;
 
 const Text = styled.div`
   margin-left: 0.5rem;
   flex: 1; 
+  color: ${({ $isChecked }) => ($isChecked ? '#adb5bd' : 'inherit')};
+  text-decoration: ${({ $isChecked }) => ($isChecked ? 'line-through' : 'none')};
 `;
