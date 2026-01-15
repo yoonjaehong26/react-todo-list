@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { UnstyledButton } from '../ui/UnStyledButton.jsx';
 import { MdAdd } from 'react-icons/md';
 import { useState } from 'react';
 
@@ -17,8 +18,10 @@ const TodoInsert =({onInsertTodo})=>{
         placeholder="할 일을 입력하세요"
         value={value}
         onChange={(e)=>setValue(e.target.value)}
+        aria-label="할 일 입력창"
       />
-      <TodoInsertButton type="submit">
+      <TodoInsertButton type="submit"
+        aria-label="할 일 추가 버튼">
         <MdAdd />
       </TodoInsertButton>
     </TodoInsertContainer>
@@ -47,7 +50,7 @@ const TodoInsertInput = styled.input`
     }
 `;
 
-const TodoInsertButton = styled.button`
+const TodoInsertButton = styled(UnstyledButton)`
 
     align-items: center;
     justify-content: center;
