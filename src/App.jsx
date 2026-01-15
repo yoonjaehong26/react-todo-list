@@ -23,10 +23,17 @@ function App() {
     );
   };
 
+  const onRemoveTodo = (selectedTodoId) => {
+    setTodos(todos.filter((todo) => todo.id !== selectedTodoId));
+  };
+
   return (
     <TodoTemplate>
       <TodoInsert onInsertTodo={onInsertTodo} />
-      <TodoList todos={todos} onToggleCheckBox={onToggleCheckBox} />
+      <TodoList todos={todos}
+        onToggleCheckBox={onToggleCheckBox}
+        onRemoveTodo={onRemoveTodo}
+      />
     </TodoTemplate>
   );
 }
