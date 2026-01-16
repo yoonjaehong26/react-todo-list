@@ -12,7 +12,7 @@ function App() {
       text,
       isChecked: false,
     };
-    setTodos(todos.concat(newTodo));
+    setTodos([newTodo, ...todos]);
   };
 
   const onToggleCheckBox = (selectedTodoId) => {
