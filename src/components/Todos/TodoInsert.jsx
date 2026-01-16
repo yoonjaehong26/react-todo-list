@@ -7,9 +7,9 @@ const TodoInsert =({onInsertTodo})=>{
   const [value, setValue]= useState('');
 
   const onSubmitTodo = (e) => {
+    e.preventDefault();
     onInsertTodo(value);
     setValue('');
-    e.preventDefault();
   };
 
   return (
