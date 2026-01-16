@@ -40,13 +40,13 @@ const TodoInsertContainer = styled.form`
 const TodoInsertInput = styled.input`
     background-color: ${({ theme }) => theme.colors.background};
     border: none;
-    color: #fff;
+    color: ${({ theme }) => theme.colors.lightText};
     font-size: 1.125rem;
     line-height: 1.5;
     outline: none;
     flex: 1;
     &::placeholder {
-      color: #8f9194;
+color: ${({ theme }) => theme.colors.grayText};
     }
 `;
 
