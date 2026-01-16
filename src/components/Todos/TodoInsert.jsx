@@ -8,6 +8,14 @@ const TodoInsert =({onInsertTodo})=>{
 
   const onSubmitTodo = (e) => {
     e.preventDefault();
+    if (value.length > 50){
+      alert('할 일은 50자 이하로 입력해주세요. 현재 길이:' + value.length+'자');
+      return;
+    }
+    if (!value.trim()){
+      alert('할 일을 입력해주세요.');
+      return;
+    }
     onInsertTodo(value);
     setValue('');
   };
@@ -19,6 +27,7 @@ const TodoInsert =({onInsertTodo})=>{
         value={value}
         onChange={(e)=>setValue(e.target.value)}
         aria-label="할 일 입력창"
+        maxLength={100}
       />
       <TodoInsertButton type="submit"
         aria-label="할 일 추가 버튼">
