@@ -13,7 +13,7 @@ const TodoInsert =({onInsertTodo})=>{
   };
 
   return (
-    <TodoInsertContainer onSubmit={onSubmitTodo}>
+    <TodoInsertFormContainer onSubmit={onSubmitTodo}>
       <TodoInsertInput
         placeholder="할 일을 입력하세요"
         value={value}
@@ -24,13 +24,13 @@ const TodoInsert =({onInsertTodo})=>{
         aria-label="할 일 추가 버튼">
         <MdAdd />
       </TodoInsertButton>
-    </TodoInsertContainer>
+    </TodoInsertFormContainer>
   );
 
 };
 export default TodoInsert;
 
-const TodoInsertContainer = styled.form`
+const TodoInsertFormContainer = styled.form`
   display: flex;
   width: 100%;
   height: 50px;    
