@@ -5,9 +5,10 @@ import { ThemeProvider } from 'styled-components';
 import theme from './theme.js';
 
 createRoot(document.getElementById('root')).render(
-  <ThemeProvider theme={theme}>
-    <StrictMode>
+  <StrictMode>
+    <ThemeProvider theme={theme}>
       <App />
-    </StrictMode>
-  </ThemeProvider>,
+    </ThemeProvider>
+  </StrictMode>
+  ,
 );
