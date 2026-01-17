@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from '../../theme';
 
 export const UnStyledButton = styled.button`
   background: none;
@@ -13,6 +14,6 @@ export const UnStyledButton = styled.button`
   color: inherit;
   outline: none;
   &:focus-visible {
-    outline: 2px solid ${({ theme }) => theme.colors.primary };
+    outline: 2px solid ${theme.colors.primary};
   }
 `;

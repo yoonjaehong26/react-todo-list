@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import GreedyLogo from '../ui/GreedyLogo.jsx';
+import theme from '../../theme';
 const TodoTemplate = ({ children }) => {
   return (
     <TodoLayout>
@@ -48,10 +49,10 @@ const TodoTemplateHeaderContainer = styled.div`
   display: flex;
   width:100%;
   height:48px;
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: ${theme.colors.primary};
 `;
 
 const TodoTemplateHeaderText = styled.div`
-  color: ${({ theme }) => theme.colors.lightText};
+  color: ${theme.colors.lightText};
   font-size: 20px;
 `;
