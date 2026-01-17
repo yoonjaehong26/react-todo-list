@@ -6,19 +6,19 @@ const TodoListItem = ({todo, onToggleCheckBox, onRemoveTodo}) => {
 
   return (
     <TodoListItemContainer>
-      <CheckBoxContainer onClick={() => onToggleCheckBox(todo.id)}
+      <CheckBoxButton onClick={() => onToggleCheckBox(todo.id)}
         aria-label={todo.isChecked ? '할 일 체크 해제 버튼' : '할 일 체크 버튼'}
         type="button"
       >
         {todo.isChecked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
-      </CheckBoxContainer>
+      </CheckBoxButton>
       <Text $isChecked={todo.isChecked}>{todo.text}</Text>
-      <RemoveButtonContainer onClick={() => onRemoveTodo(todo.id)}
+      <RemoveButton onClick={() => onRemoveTodo(todo.id)}
         aria-label="할 일 삭제 버튼"
         type="button"
       >
         <MdRemoveCircleOutline />
-      </RemoveButtonContainer>
+      </RemoveButton>
     </TodoListItemContainer>
   );
 };
@@ -33,7 +33,7 @@ const TodoListItemContainer = styled.li`
   box-sizing: border-box;
 `;
 
-const CheckBoxContainer = styled(UnStyledButton)`
+const CheckBoxButton = styled(UnStyledButton)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,7 +48,7 @@ const Text = styled.div`
   text-decoration: ${({ $isChecked }) => ($isChecked ? 'line-through' : 'none')};
 `;
 
-const RemoveButtonContainer = styled(UnStyledButton)`
+const RemoveButton = styled(UnStyledButton)`
   display: flex;
   align-items: center;
   justify-content: center;
