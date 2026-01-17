@@ -2,12 +2,12 @@ import styled from 'styled-components';
 import GreedyLogo from '../ui/GreedyLogo.jsx';
 const TodoTemplate = ({ children }) => {
   return (
-    <TodoTemplateWrapper>
+    <TodoLayout>
       <TodoTemplateContainer>
         <TodoTemplateHeader/>
         {children}
       </TodoTemplateContainer>
-    </TodoTemplateWrapper>
+    </TodoLayout>
   );
 };
 export default TodoTemplate;
@@ -23,7 +23,7 @@ const TodoTemplateHeader=()=>{
   );
 };
 
-const TodoTemplateWrapper = styled.div`
+const TodoLayout = styled.div`
   display: flex;
   justify-content: center; 
   align-items: center;     
