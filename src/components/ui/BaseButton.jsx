@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import theme from '../../theme';
 
-export const UnStyledButton = styled.button`
+export const BaseButton = styled.button`
   background: none;
   border: none;
   padding: 0;

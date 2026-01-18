@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { MdCheckBox,MdCheckBoxOutlineBlank } from 'react-icons/md';
-import { UnStyledButton } from '../ui/UnStyledButton.jsx';
+import { BaseButton } from '../ui/BaseButton.jsx';
 
 const CheckBoxButton = ({ checked, onClick }) => {
   return (
@@ -15,7 +15,7 @@ const CheckBoxButton = ({ checked, onClick }) => {
 
 export default CheckBoxButton;
 
-const StyledCheckBoxButton = styled(UnStyledButton)`
+const StyledCheckBoxButton = styled(BaseButton)`
   display: flex;
   align-items: center;
   justify-content: center;

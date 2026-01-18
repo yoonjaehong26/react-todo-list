@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { UnStyledButton } from '../ui/UnStyledButton.jsx';
+import { BaseButton } from '../ui/BaseButton.jsx';
 import { MdAdd } from 'react-icons/md';
 import { useState } from 'react';
 import theme from '../../theme';
@@ -60,7 +60,7 @@ const TodoInsertInput = styled.input`
   }
 `;
 
-const TodoInsertButton = styled(UnStyledButton)`
+const TodoInsertButton = styled(BaseButton)`
   align-items: center;
   justify-content: center;
   background: ${theme.colors.buttonColor};
