@@ -32,6 +32,7 @@ const TodoListItemContainer = styled.li`
 const Text = styled.div`
   margin-left: 0.5rem;
   flex: 1; 
+  word-break: break-all;
   color: ${({ $isChecked }) => ($isChecked ? theme.colors.grayText : theme.colors.text)};
   text-decoration: ${({ $isChecked }) => ($isChecked ? 'line-through' : 'none')};
 `;
