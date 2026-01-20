@@ -29,7 +29,7 @@ const TodoListItemContainer = styled.li`
   box-sizing: border-box;
 `;
 
-const Text = styled.div`
+const Text = styled.span`
   margin-left: 0.5rem;
   flex: 1; 
   word-break: break-all;

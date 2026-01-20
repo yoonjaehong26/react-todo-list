@@ -31,7 +31,7 @@ const TodoLayout = styled.div`
   min-height: 100vh;      
 `;
 
-const TodoTemplateContainer = styled.div`
+const TodoTemplateContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;   
@@ -52,7 +52,9 @@ const TodoTemplateHeaderContainer = styled.div`
   background-color: ${theme.colors.primary};
 `;
 
-const TodoTemplateHeaderText = styled.div`
+const TodoTemplateHeaderText = styled.h2`
+  margin: 0;
+  font-weight:normal;
   color: ${theme.colors.lightText};
   font-size: 20px;
 `;
