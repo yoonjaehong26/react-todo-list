@@ -4,19 +4,19 @@ import  TodoListItem from './TodoListItem.jsx';
 const TodoList=({todos, onToggleCheckBox, onRemoveTodo})=>{
 
   return (
-    <TodoListContainer>
+    <TodoItems>
       {todos.map((todo)=>(
         <TodoListItem key={todo.id} todo={todo}
           onToggleCheckBox={onToggleCheckBox}
           onRemoveTodo={onRemoveTodo}/>
       ))}
-    </TodoListContainer>
+    </TodoItems>
   );
 };
 
 export default TodoList;
 
-const TodoListContainer = styled.ul`
+const TodoItems = styled.ul`
   display: flex;
   flex-direction: column;
   flex: 1;       

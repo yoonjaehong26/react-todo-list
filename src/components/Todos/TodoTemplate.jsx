@@ -3,12 +3,12 @@ import GreedyLogo from '../ui/GreedyLogo.jsx';
 import theme from '../../theme';
 const TodoTemplate = ({ children }) => {
   return (
-    <TodoLayout>
+    <TodoTemplateLayout>
       <TodoTemplateContainer>
         <TodoTemplateHeader/>
         {children}
       </TodoTemplateContainer>
-    </TodoLayout>
+    </TodoTemplateLayout>
   );
 };
 export default TodoTemplate;
@@ -24,7 +24,7 @@ const TodoTemplateHeader=()=>{
   );
 };
 
-const TodoLayout = styled.div`
+const TodoTemplateLayout = styled.div`
   display: flex;
   justify-content: center; 
   align-items: center;     

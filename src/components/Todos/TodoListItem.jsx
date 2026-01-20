@@ -6,7 +6,7 @@ import theme from '../../theme';
 const TodoListItem = ({todo, onToggleCheckBox, onRemoveTodo }) => {
 
   return (
-    <TodoListItemContainer>
+    <TodoItem>
       <CheckBoxButton checked={todo.isChecked} onClick={() => onToggleCheckBox(todo.id)} />
       <Text $isChecked={todo.isChecked}>{todo.text}</Text>
       <RemoveButton onClick={() => onRemoveTodo(todo.id)}
@@ -15,13 +15,13 @@ const TodoListItem = ({todo, onToggleCheckBox, onRemoveTodo }) => {
       >
         <MdRemoveCircleOutline />
       </RemoveButton>
-    </TodoListItemContainer>
+    </TodoItem>
   );
 };
 
 export default TodoListItem;
 
-const TodoListItemContainer = styled.li`
+const TodoItem = styled.li`
   padding: 1rem;
   display: flex;
   align-items: center;
