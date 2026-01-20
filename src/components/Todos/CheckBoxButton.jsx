@@ -2,11 +2,12 @@ import styled from 'styled-components';
 import { MdCheckBox,MdCheckBoxOutlineBlank } from 'react-icons/md';
 import { BaseButton } from '../ui/BaseButton.jsx';
 
-const CheckBoxButton = ({ checked, onClick }) => {
+const CheckBoxButton = ({ checked, type = 'button', ...props }) => {
   return (
-    <StyledCheckBoxButton onClick={onClick}
+    <StyledCheckBoxButton
+      type={type}
       aria-label={checked ? '할 일 체크 해제 버튼' : '할 일 체크 버튼'}
-      type="button"
+      {...props}
     >
       {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
     </StyledCheckBoxButton>
