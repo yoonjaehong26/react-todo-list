@@ -3,6 +3,7 @@ import {MdRemoveCircleOutline} from 'react-icons/md';
 import { BaseButton } from '../ui/BaseButton.jsx';
 import CheckBoxButton from './CheckBoxButton.jsx';
 import theme from '../../theme';
+
 const TodoListItem = ({todo, onToggleCheckBox, onRemoveTodo }) => {
 
   return (

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import GreedyLogo from '../ui/GreedyLogo.jsx';
 import theme from '../../theme';
+
 const TodoTemplate = ({ children }) => {
   return (
     <TodoTemplateLayout>
