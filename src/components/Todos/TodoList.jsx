@@ -3,12 +3,24 @@ import  TodoListItem from './TodoListItem.jsx';
 
 const TodoList=({todos, onToggleCheckBox, onRemoveTodo})=>{
 
+  const handleClick = (e) => {
+    const target = e.target.closest('[data-action]');
+    if (!target) return;
+
+    const action = target.dataset.action;
+    const id = Number(target.dataset.id);
+
+    if (action === 'toggle') {
+      onToggleCheckBox(id);
+    } else if (action === 'remove') {
+      onRemoveTodo(id);
+    }
+  };
+
   return (
-    <TodoItems>
+    <TodoItems onClick={handleClick}>
       {todos.map((todo)=>(
-        <TodoListItem key={todo.id} todo={todo}
-          onToggleCheckBox={onToggleCheckBox}
-          onRemoveTodo={onRemoveTodo}/>
+        <TodoListItem key={todo.id} todo={todo} />
       ))}
     </TodoItems>
   );

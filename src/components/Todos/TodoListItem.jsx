@@ -4,15 +4,21 @@ import { BaseButton } from '../ui/BaseButton.jsx';
 import CheckBoxButton from './CheckBoxButton.jsx';
 import theme from '../../theme';
 
-const TodoListItem = ({todo, onToggleCheckBox, onRemoveTodo }) => {
+const TodoListItem = ({todo}) => {
 
   return (
     <TodoItem>
-      <CheckBoxButton checked={todo.isChecked} onClick={() => onToggleCheckBox(todo.id)} />
+      <CheckBoxButton
+        checked={todo.isChecked}
+        data-action="toggle"
+        data-id={todo.id}
+      />
       <Text $isChecked={todo.isChecked}>{todo.text}</Text>
-      <RemoveButton onClick={() => onRemoveTodo(todo.id)}
+      <RemoveButton
         aria-label="할 일 삭제 버튼"
         type="button"
+        data-action="remove"
+        data-id={todo.id}
       >
         <MdRemoveCircleOutline />
       </RemoveButton>
