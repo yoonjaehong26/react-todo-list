@@ -8,7 +8,7 @@ const TodoList=({todos, onToggleCheckBox, onRemoveTodo})=>{
     if (!target) return;
 
     const action = target.dataset.action;
-    const id = Number(target.dataset.id);
+    const id = target.dataset.id;
 
     if (action === 'toggle') {
       onToggleCheckBox(id);
