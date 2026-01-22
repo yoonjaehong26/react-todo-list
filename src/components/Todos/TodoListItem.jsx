@@ -1,10 +1,11 @@
+import { memo } from 'react';
 import styled from 'styled-components';
 import {MdRemoveCircleOutline} from 'react-icons/md';
 import { BaseButton } from '../ui/BaseButton.jsx';
 import CheckBoxButton from './CheckBoxButton.jsx';
 import theme from '../../theme';
 
-const TodoListItem = ({todo}) => {
+const TodoListItem = memo(function TodoListItem({todo}) {
 
   return (
     <TodoItem>
@@ -24,7 +25,7 @@ const TodoListItem = ({todo}) => {
       </RemoveButton>
     </TodoItem>
   );
-};
+});
 
 export default TodoListItem;
 
