@@ -24,19 +24,19 @@ function App() {
       text,
       isChecked: false,
     };
-    setTodos(todos=>[newTodo, ...todos]);
+    setTodos(prevTodos=>[newTodo, ...prevTodos]);
   };
 
   const onToggleCheckBox = (selectedTodoId) => {
     setTodos(
-      todos.map((todo) =>
+      prevTodos => prevTodos.map((todo) =>
         todo.id === selectedTodoId ? { ...todo, isChecked: !todo.isChecked } : todo,
       ),
     );
   };
 
   const onRemoveTodo = (selectedTodoId) => {
-    setTodos(todos.filter((todo) => todo.id !== selectedTodoId));
+    setTodos(prevTodos => prevTodos.filter((todo) => todo.id !== selectedTodoId));
   };
 
   return (
