@@ -7,7 +7,7 @@ function createBulkTodos(){
   const array = [];
   for(let i=1;i<2500;i++){
     array.push({
-      id : crypto.randomUUID(),
+      id : String(i),
       text : `할 일${i}`,
       isChecked: false,
     });
